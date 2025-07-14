@@ -16,7 +16,8 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 
 ---
 
-## **Core Components**
+## **Architecture and Core Components**
+![Alt Text](Architecture.png)
 
 | **Component**                                                 | **Description**                                                                                                   |
 | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -25,6 +26,30 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 | **ASR / STT (Automatic Speech Recognition / Speech-to-Text)** | Transcribes spoken audio into text.                                                                               |
 | **LLM (Large Language Model)**                                | Generates text-based responses from the transcribed input. This layer can include content filtering.              |
 | **TTS (Text-to-Speech / Speech Synthesis)**                   | Converts LLM-generated text into natural, spoken voice.                                                           |
+
+
+
+### **VAD (Voice Activity Detection)**
+
+* Sends audio to STT only when someone is speaking.
+* Reduces hallucinations from the STT layer.
+* Lowers system costs significantly.
+
+### **STT (Speech-to-Text)**
+
+* Converts spoken language into text.
+* Decide which languages to support.
+* Optionally use specialized models for phone calls or noisy environments.
+
+### **LLM (Large Language Model)**
+
+* Generates a response based on the transcribed input.
+* This is the layer to apply content filtering or context customization.
+
+### **TTS (Text-to-Speech)**
+
+* Converts text responses back to natural-sounding speech.
+* Choose appropriate voices, accents, or apply pronunciation overrides.
 
 ---
 
@@ -42,6 +67,8 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 ---
 
 ## **Network Protocol Stack Overview**
+![Alt Text](Network_Protocol_Stack.png)
+
 
 | **Protocol**                            | **Layer**       | **Purpose**                                                                            |
 | --------------------------------------- | --------------- | -------------------------------------------------------------------------------------- |
@@ -110,6 +137,8 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 ---
 
 ## **Component Deep Dive**
+![Alt Text](Architecture.png)
+
 
 ### **VAD (Voice Activity Detection)**
 
