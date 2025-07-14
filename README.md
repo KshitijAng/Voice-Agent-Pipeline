@@ -1,12 +1,5 @@
-# Voice-Agent-Pipeline
-
-Here's a **clean and presentable `README.md` section** for your GitHub voice agent project, based on your content:
-
----
-
 # Voice Agent using LiveKit, ElevenLabs, and Groq
 
-## **Overview**
 
 Voice Agents combine the **speech and reasoning abilities of foundation models** to deliver **real-time, human-like voice interactions**.
 
@@ -15,6 +8,11 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 * **Personalized Learning:** Guide skill development, conduct mock interviews.
 * **Customer Service:** Handle calls for restaurant booking, sales, insurance, etc.
 * **Accessibility & Healthcare:** Power voice interfaces for medical and therapy applications.
+
+### **Unique Challenges**
+
+* **Speech & Text Artifacts:** Errors may occur in ASR/TTS or due to imperfect VAD/EOU handling.
+* **Multilingual Performance:** Non-English ASR tends to lag behind English in accuracy.
 
 ---
 
@@ -30,20 +28,16 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 
 ---
 
-## **Unique Challenges**
 
-* **Speech & Text Artifacts:** Errors may occur in ASR/TTS or due to imperfect VAD/EOU handling.
-* **Multilingual Performance:** Non-English ASR tends to lag behind English in accuracy.
-* **Latency:**
-
+# **Latency Optimization**
   * Hard to measure accurately (client vs server latency).
   * **LiveKit** helps reduce networking latency.
   * LLM inference is often the main latency contributor.
-    **Optimization strategies:**
+
+**Optimization strategies:**
   * Use smaller/quantized models for faster response.
   * Consider provider-specific limits if using APIs.
   * Prompt the LLM for shorter, more concise replies.
-  * Use interstitial responses (e.g., "Let me check...") to buy time.
 
 ---
 
