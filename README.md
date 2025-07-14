@@ -88,7 +88,7 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 
 ---
 
-## **Communication Methods**
+## **Brief on Communication Methods**
 
 ### **HTTP**
 
@@ -118,15 +118,6 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 
 ---
 
-## **About LiveKit**
-
-* **Open-source (Apache 2.0)**
-* Solves many of WebRTC's real-time streaming challenges.
-* Provides an **end-to-end framework for building voice AI agents**, easier than managing HTTP/WebSocket/WebRTC separately.
-* Simplifies scaling real-time audio pipelines.
-
----
-
 ## **System Design Trade-offs**
 
 | **Aspect**  | **Considerations**                                                         |
@@ -148,4 +139,15 @@ This repository provides a **modular, scalable framework for building real-time 
 
 ---
 
-Would you like me to help you add installation instructions, diagrams, or code usage examples next?
+## Acknowledgements
+
+Special thanks to DeepLearning.AI for the course and the following organizations for that making this work possible:
+
+- **[LiveKit](https://livekit.io/)** – Real-time audio/video infrastructure powering low-latency streaming.
+- **[ElevenLabs](https://elevenlabs.io/?utm_source=google&utm_medium=cpc&utm_campaign=india_brandsearch_brand_english&utm_id=22349493305&utm_term=elevenlabs&utm_content=brand_-_brand&gad_source=1&gad_campaignid=22349493305&gbraid=0AAAAAp9ksTF18NGR7ZaLsX2RVXbNIgQSR&gclid=CjwKCAjw1dLDBhBoEiwAQNRiQd_alkgM16W0R0E3sHC0N1yjvPlaggx-oudd37yb5BG2b3zMmXZ6IhoCgBgQAvD_BwE)** – For providing cutting-edge text-to-speech capabilities.
+- **[Groq](https://groq.com/)** – For Open-Source LLMs access and Whisper STT pipelines.
+- **[Silero](https://github.com/snakers4/silero-vad)** – For Voice Activity Detection (VAD) models.
+
+---
+
+
