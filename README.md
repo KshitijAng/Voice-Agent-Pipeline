@@ -1,4 +1,4 @@
-# Voice Agent using LiveKit, ElevenLabs, and Groq
+# AI Voice Agent using LiveKit, ElevenLabs, and Groq
 
 Voice Agents combine the **speech and reasoning abilities of foundation models** to deliver **real-time, human-like voice interactions**.
 
