@@ -1,7 +1,8 @@
 # Voice Agent using LiveKit, ElevenLabs, and Groq
 
-
 Voice Agents combine the **speech and reasoning abilities of foundation models** to deliver **real-time, human-like voice interactions**.
+
+![Alt Text](Logo.png)
 
 ### **Use Cases**
 
@@ -13,6 +14,15 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 
 * **Speech & Text Artifacts:** Errors may occur in ASR/TTS or due to imperfect VAD/EOU handling.
 * **Multilingual Performance:** Non-English ASR tends to lag behind English in accuracy.
+
+---
+
+## **About LiveKit**
+
+* **Open-source (Apache 2.0)** project for building realtime voice and video applications using WebRTC.
+* Solves many of WebRTC's real-time streaming challenges.
+* Provides an **end-to-end framework for building voice AI agents**, easier than managing HTTP/WebSocket/WebRTC separately.
+* Simplifies scaling real-time audio pipelines.
 
 ---
 
@@ -54,7 +64,7 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 ---
 
 
-# **Latency Optimization**
+## **Latency Optimization**
   * Hard to measure accurately (client vs server latency).
   * **LiveKit** helps reduce networking latency.
   * LLM inference is often the main latency contributor.
@@ -108,21 +118,12 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 
 ---
 
-## **LiveKit**
+## **About LiveKit**
 
 * **Open-source (Apache 2.0)**
 * Solves many of WebRTC's real-time streaming challenges.
 * Provides an **end-to-end framework for building voice AI agents**, easier than managing HTTP/WebSocket/WebRTC separately.
 * Simplifies scaling real-time audio pipelines.
-
----
-
-## **Voice Agent Architectures**
-
-| **Type**                                   | **Description**                                                                                        |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| **Pipeline Agent (VAD → STT → LLM → TTS)** | Fine-grained control over each step. Best for custom control of latency, quality, and cost trade-offs. |
-| **Real-time Agent (S2S)**                  | Simpler to implement but offers less control over how data flows.                                      |
 
 ---
 
@@ -134,46 +135,6 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 | **Quality** | Pipeline gives you control over models and fine-tuning.                    |
 | **Cost**    | VAD reduces cost by filtering silence. Smaller models reduce LLM expenses. |
 
----
-
-## **Component Deep Dive**
-![Alt Text](Architecture.png)
-
-
-### **VAD (Voice Activity Detection)**
-
-* Sends audio to STT only when someone is speaking.
-* Reduces hallucinations from the STT layer.
-* Lowers system costs significantly.
-
-### **STT (Speech-to-Text)**
-
-* Converts spoken language into text.
-* Decide which languages to support.
-* Optionally use specialized models for phone calls or noisy environments.
-
-### **LLM (Large Language Model)**
-
-* Generates a response based on the transcribed input.
-* This is the layer to apply content filtering or context customization.
-
-### **TTS (Text-to-Speech)**
-
-* Converts text responses back to natural-sounding speech.
-* Choose appropriate voices, accents, or apply pronunciation overrides.
-
----
-
-## **ElevenLabs Role**
-
-**ElevenLabs** provides the **Text-to-Speech (TTS)** capabilities in this system.
-
-### **Features:**
-
-* **Realistic, human-like voice generation**
-* **Voice cloning** for custom voice profiles
-* **Multilingual support**
-* **Emotion and tone control**
 
 ---
 
