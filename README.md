@@ -15,6 +15,7 @@ Voice Agents combine the **speech and reasoning abilities of foundation models**
 * **Speech & Text Artifacts:** Errors may occur in ASR/TTS or due to imperfect VAD/EOU handling.
 * **Multilingual Performance:** Non-English ASR tends to lag behind English in accuracy.
 
+### **Note**: Requires API Keys from `Groq` and `Elevenlabs`
 ---
 
 ## **About LiveKit**
